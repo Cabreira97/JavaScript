@@ -1,28 +1,53 @@
-console.log("Bem-vindo ao programinha que calcula seu imc");
-
-imc(700,1.8);
-function imc(peso, altura){
-  const imc = peso /altura**2;
-
-  if((imc >=18.5) && (imc<=24.9)){
-    console.log("Seu imc esta normal e é",imc);
-  }
-  else if((imc >=25) && (imc <=29.9)){
-
-    console.log("Seu imc esta acusando um sobrepeso e é",imc);
-  }
-  else if((imc >=30)&& (imc <40)){
-
-    console.log("Seu imc esta acusando obesidade e é:",imc)
-
-  }
-  else if(imc <18.5){
-    console.log("Seu imc esta acusando um nivel abaixo do peso",imc)
-  }
-  else{
-    console.log("Seu imc esta acusando uma obesidade grave:",imc)
+// Crie uma função para verificar se um valor é Truthy
+function isTrue(valor){
+  return !!valor;
   }
 
-
+/// Crie uma função matemática que retorne o perímetro de um quadrado
+// lembrando: perímetro é a soma dos quatro lados do quadrado
+function quadrado(lado){
+ return lado*4;
 }
 
+// Crie uma função que retorne o seu nome completo
+// ela deve possuir os parâmetros: nome e sobrenome
+
+function nomeCompleto(nome, sobrenome){
+return `${nome} ${sobrenome}`;
+}
+// Crie uma função que verifica se um número é par
+function numeropar(numero){
+  var modulo = numero % 2; 
+  if(modulo === 0){
+    return true
+  }else{
+    return false
+  }
+
+}
+// Crie uma função que retorne o tipo de
+// dado do argumento passado nela (typeof)
+function tipodedado(dado){
+  return typeof dado;
+}
+// addEventListener é uma função nativa do JavaScript
+// o primeiro parâmetro é o evento que ocorre e o segundo o Callback
+// utilize essa função para mostrar no console o seu nome completo
+// quando o evento 'scroll' ocorrer.
+addEventListener('scroll', function(){
+console.log("Thiago")
+});
+
+// Corrija o erro abaixo
+var totalPaises = 193;
+function precisoVisitar(paisesVisitados) {
+
+  return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
+}
+
+function jaVisitei(paisesVisitados) {
+
+  return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
+}
+precisoVisitar(20);
+jaVisitei(20);
